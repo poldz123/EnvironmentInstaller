@@ -11,7 +11,7 @@ install-brew-cli() {
 }
 
 install-brew-cask() {
-
+	brew cask install slack
 }
 
 install-brew
