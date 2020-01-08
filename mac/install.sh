@@ -37,6 +37,7 @@ install-applications() {
 	brew cask install spotify
 	brew cask install google-chrome
 	brew cask install android-studio
+	brew cask install sublime-text
 	brew cask install p4v
 }
 
