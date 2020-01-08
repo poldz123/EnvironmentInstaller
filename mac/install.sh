@@ -19,6 +19,8 @@ install-terminal() {
 	brew install zsh
 	echo | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
 	# Create the alias for git
+	util-append-unique-text-to-file 'alias gb="git branch"' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'alias gbc="git checkout"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gpl="git pull"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gph="git push"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gc="git commit -m"' "$HOME/.zshrc"
