@@ -13,6 +13,11 @@ install-base() {
 	fi
 }
 
+install-java() {
+	util-print-header "Installing JAVA-JDK-8"
+	brew cask install adoptopenjdk/openjdk/adoptopenjdk8
+}
+
 install-terminal() {
 	util-print-header "Installing ZSH-TERMINAL"
 	brew cask install iterm2
@@ -34,6 +39,8 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gl="git log --pretty=oneline"' "$HOME/.zshrc"
 }
 
+
+
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
 	brew cask install spotify
@@ -44,5 +51,6 @@ install-applications() {
 }
 
 install-base
+install-java
 install-terminal
 install-applications
