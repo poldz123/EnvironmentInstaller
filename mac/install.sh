@@ -40,7 +40,14 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gl="git log --pretty=oneline"' "$HOME/.zshrc"
 }
 
-
+install-kubernetes() {
+	util-print-header "Installing KUBERNETES"
+	brew install kubectl
+	brew install kubectx
+	# Create an empty config, this wont be empty if it was already created before
+	mkdir -p ~/.kube
+	touch ~/.kube/config
+}
 
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
@@ -49,9 +56,11 @@ install-applications() {
 	brew cask install android-studio
 	brew cask install sublime-text
 	brew cask install p4v
+	brew cask install virtualbox
 }
 
 install-base
 install-java
 install-terminal
+install-kubernetes
 install-applications
