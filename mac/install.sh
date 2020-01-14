@@ -25,7 +25,7 @@ install-terminal() {
 	echo | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
 	# Create the alias for git
 	util-append-unique-text-to-file 'alias gb="git branch"' "$HOME/.zshrc"
-	util-append-unique-text-to-file 'alias gbc="git checkout -b"' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'alias gbc="git checkout"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gpl="git pull"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gph="git push"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gphb="git push -u origin"' "$HOME/.zshrc"
@@ -58,6 +58,7 @@ install-applications() {
 	brew cask install p4v
 	brew cask install virtualbox
 	brew cask install db-browser-for-sqlite
+	brew cask install android-file-transfer
 }
 
 install-base
