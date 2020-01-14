@@ -28,7 +28,7 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gbc="git checkout"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gpl="git pull"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gph="git push"' "$HOME/.zshrc"
-	util-append-unique-text-to-file 'alias gphb="git push -u origin"' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'alias gphb="git push -u origin `git rev-parse --abbrev-ref HEAD`"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gc="git commit -m"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gs="git status"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gca="git commit --amend"' "$HOME/.zshrc"
