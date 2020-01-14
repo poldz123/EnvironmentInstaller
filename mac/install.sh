@@ -57,6 +57,7 @@ install-applications() {
 	brew cask install sublime-text
 	brew cask install p4v
 	brew cask install virtualbox
+	brew cask install db-browser-for-sqlite
 }
 
 install-base
