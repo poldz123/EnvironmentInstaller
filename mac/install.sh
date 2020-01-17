@@ -50,6 +50,11 @@ install-kubernetes() {
 	touch ~/.kube/config
 }
 
+install-commands() {
+	util-print-header "Installing BREW-COMMANDS"
+	brew install bundletool
+}
+
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
 	brew cask install spotify
@@ -66,4 +71,5 @@ install-base
 install-java
 install-terminal
 install-kubernetes
+install-commands
 install-applications
