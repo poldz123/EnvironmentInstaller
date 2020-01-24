@@ -70,6 +70,13 @@ install-applications() {
 install-base
 install-java
 install-terminal
-install-kubernetes
 install-commands
 install-applications
+
+# Install with kubernetes program. It will also install the configuration file 
+# that you need to edit to connect to the external server.
+if [[ "$0" == "--with-kubernetes" ]]; then
+	install-kubernetes
+fi
+
+util-print-header "DONE"
