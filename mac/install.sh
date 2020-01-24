@@ -67,16 +67,24 @@ install-applications() {
 	brew cask install android-file-transfer
 }
 
+install-addon() {
+	option="$1"
+	if [[ "$option" == "--with-kubernetes" ]]; then
+		install-kubernetes
+	fi
+}
+
 install-base
 install-java
 install-terminal
 install-commands
 install-applications
 
-# Install with kubernetes program. It will also install the configuration file 
-# that you need to edit to connect to the external server.
-if [[ "$0" == "--with-kubernetes" ]]; then
-	install-kubernetes
-fi
+# Make sure to add $0 arguments since we are running the script in bash
+install-addon "$0"
+for option in "$@"
+do
+	install-addon $option
+done
 
 util-print-header "DONE"
