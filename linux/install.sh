@@ -47,6 +47,8 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gmt="git mergetool -y --tool=p4merge"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gaa="git add ."' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gl="git log --pretty=oneline"' "$HOME/.zshrc"
+	# Set default shell to zsh
+	chsh -s $(which zsh)
 }
 
 install-kubernetes() {
