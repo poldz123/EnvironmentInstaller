@@ -47,6 +47,12 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gmt="git mergetool -y --tool=p4merge"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gaa="git add ."' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gl="git log --pretty=oneline"' "$HOME/.zshrc"
+	# Create android path environment variables
+	util-append-unique-text-to-file 'export ANDROID_HOME=$HOME/Android/Sdk' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/emulator' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/tools' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/tools/bin' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/platform-tools' "$HOME/.zshrc"
 	# Set default shell to zsh
 	chsh -s $(which zsh)
 }
@@ -63,10 +69,14 @@ install-kubernetes() {
 install-commands() {
 	util-print-header "Installing BREW-COMMANDS"
 	brew install bundletool
+	brew install yarn
+	brew install node
 }
 
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
+	sudo snap install android-studio --classic
+	sudo snap install sublime-text --classic
 	# brew cask install spotify
 	# brew cask install google-chrome
 	# brew cask install android-studio
