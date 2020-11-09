@@ -74,6 +74,7 @@ install-applications() {
 	brew cask install android-file-transfer
 	brew cask install intellij-idea-ce
 	brew cask install docker
+	brew cask install postman
 }
 
 install-addon() {
