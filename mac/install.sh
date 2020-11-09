@@ -50,6 +50,13 @@ install-kubernetes() {
 	touch ~/.kube/config
 }
 
+install-aws-serverless() {
+	brew tap aws/tap
+	brew install serverless
+	brew install aws-sam-cli
+	brew install node
+}
+
 install-commands() {
 	util-print-header "Installing BREW-COMMANDS"
 	brew install bundletool
@@ -65,6 +72,8 @@ install-applications() {
 	brew cask install virtualbox
 	brew cask install db-browser-for-sqlite
 	brew cask install android-file-transfer
+	brew cask install intellij-idea-ce
+	brew cask install docker
 }
 
 install-addon() {
@@ -77,6 +86,7 @@ install-addon() {
 install-base
 install-java
 install-terminal
+install-aws-serverless
 install-commands
 install-applications
 
