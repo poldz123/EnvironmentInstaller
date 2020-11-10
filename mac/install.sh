@@ -75,6 +75,7 @@ install-applications() {
 	brew cask install intellij-idea-ce
 	brew cask install docker
 	brew cask install postman
+	brew cask install visual-studio-code
 }
 
 install-addon() {
