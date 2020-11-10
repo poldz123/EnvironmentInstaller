@@ -58,6 +58,10 @@ install-aws-serverless() {
 	brew install yarn
 }
 
+install-mobile() {
+	brew install android-sdk
+}
+
 install-commands() {
 	util-print-header "Installing BREW-COMMANDS"
 	brew install bundletool
@@ -90,6 +94,7 @@ install-base
 install-java
 install-terminal
 install-aws-serverless
+install-mobile
 install-commands
 install-applications
 
