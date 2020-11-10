@@ -39,6 +39,15 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gmt="git mergetool -y --tool=p4merge"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gaa="git add ."' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gl="git log --pretty=oneline"' "$HOME/.zshrc"
+	# Create android path environment variables
+	util-append-unique-text-to-file 'export ANDROID_HOME=~/Library/Android/sdk' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export ANDROID_SDK_ROOT=~/Library/Android/sdk' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export ANDROID_AVD_HOME=~/.android/avd' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/emulator' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/tools' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/tools/bin' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_HOME/platform-tools' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'export PATH=$PATH:$ANDROID_AVD_HOME' "$HOME/.zshrc"
 }
 
 install-kubernetes() {
@@ -51,6 +60,7 @@ install-kubernetes() {
 }
 
 install-aws-serverless() {
+	util-print-header "Installing AWS-SERVERLESS"
 	brew tap aws/tap
 	brew install serverless
 	brew install aws-sam-cli
