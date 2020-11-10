@@ -55,6 +55,7 @@ install-aws-serverless() {
 	brew install serverless
 	brew install aws-sam-cli
 	brew install node
+	brew install yarn
 }
 
 install-commands() {
