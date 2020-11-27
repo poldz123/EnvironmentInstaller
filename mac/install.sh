@@ -20,6 +20,7 @@ install-java() {
 
 install-terminal() {
 	util-print-header "Installing ZSH-TERMINAL"
+	touch ~/.zshrc # Create the file so that zsh wont break during installation
 	brew cask install iterm2
 	brew install zsh
 	echo | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
