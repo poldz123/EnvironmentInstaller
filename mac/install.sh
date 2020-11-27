@@ -23,7 +23,7 @@ install-terminal() {
 	touch ~/.zshrc # Create the file so that zsh wont break during installation
 	brew cask install iterm2
 	brew install zsh
-	echo | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
 	# Create the alias for git
 	util-append-unique-text-to-file 'alias gb="git branch"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gbc="git checkout"' "$HOME/.zshrc"
