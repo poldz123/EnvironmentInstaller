@@ -80,6 +80,7 @@ install-mobile() {
 install-commands() {
 	util-print-header "Installing BREW-COMMANDS"
 	brew install bundletool
+	brew install jenv
 }
 
 install-applications() {
