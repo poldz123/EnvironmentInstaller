@@ -47,3 +47,6 @@ bash -c "$(curl -L https://raw.githubusercontent.com/poldz123/EnvironmentInstall
 | Option | Description  |
 |--------|---|
 | --with-kubernetes | Install kubernetes cli and Kubernetes powertools |
+
+## Helpful links
+[jenv installation](https://stackoverflow.com/questions/66579113/how-to-change-java-version-in-mac-os)
