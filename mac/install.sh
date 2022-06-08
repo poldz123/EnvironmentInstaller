@@ -9,7 +9,7 @@ install-base() {
 	# Install brew: https://brew.sh/
 	if ! which brew > /dev/null; then
 		util-print-header "Installing BREW"
-		echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	fi
 }
 
