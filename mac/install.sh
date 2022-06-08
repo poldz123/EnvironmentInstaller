@@ -9,7 +9,7 @@ install-base() {
 	# Install brew: https://brew.sh/
 	if ! which brew > /dev/null; then
 		util-print-header "Installing BREW"
-		echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	fi
 }
 
@@ -24,7 +24,7 @@ install-terminal() {
 	touch ~/.zshrc # Create the file so that zsh wont break during installation
 	brew install --cask iterm2
 	brew install zsh
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" | true
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
 	# Create the alias for git
 	util-append-unique-text-to-file 'alias gb="git branch"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gbc="git checkout"' "$HOME/.zshrc"
