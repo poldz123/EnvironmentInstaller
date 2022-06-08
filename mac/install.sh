@@ -90,7 +90,7 @@ install-applications() {
 	brew install --cask android-studio
 	brew install --cask sublime-text
 	brew install --cask p4v
-	brew install --cask virtualbox
+	brew install --cask charles
 	brew install --cask db-browser-for-sqlite
 	brew install --cask android-file-transfer
 	brew install --cask intellij-idea-ce
