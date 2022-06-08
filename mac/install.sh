@@ -41,6 +41,7 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gmt="git mergetool -y --tool=p4merge"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gaa="git add ."' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gl="git log --pretty=oneline"' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'alias cls="clear"' "$HOME/.zshrc"
 	# Create android path environment variables
 	util-append-unique-text-to-file 'export ANDROID_HOME=~/Library/Android/sdk' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'export ANDROID_SDK_ROOT=~/Library/Android/sdk' "$HOME/.zshrc"
