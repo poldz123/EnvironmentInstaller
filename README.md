@@ -7,6 +7,8 @@ Installation using bash through curl:
 bash -c "$(curl -L https://raw.githubusercontent.com/poldz123/EnvironmentInstaller/master/mac/install.sh)"
 ```
 
+
+
 ### Linux
 ```bash
 bash -c "$(curl -L https://raw.githubusercontent.com/poldz123/EnvironmentInstaller/master/linux/install.sh)"
