@@ -85,8 +85,7 @@ install-commands() {
 
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
-	brew install --cask google-chrome
-	brew install --cask android-studio
+ 	brew install --cask android-studio	
 	brew install --cask sublime-text
 }
 
