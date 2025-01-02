@@ -15,7 +15,7 @@ install-base() {
 
 install-java() {
 	util-print-header "Installing JAVA-JDK-8"
-	brew install openjdk@11
+	brew install --cask temurin@11
 }
 
 install-terminal() {
