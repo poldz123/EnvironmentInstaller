@@ -1,0 +1,32 @@
+default-scenarios = ["mac_benchmark_tests_clean", "mac_benchmark_tests_warm", "mac_benchmark_tests_cold"]
+
+mac_benchmark_tests_clean {
+    tasks = ["testAll"]
+
+    cleanup-tasks = ["clean"]
+    iterations = 5
+    warm-ups = 3
+    clear-build-cache-before = SCENARIO
+    clear-project-cache-before = SCENARIO
+    clear-transform-cache-before = SCENARIO
+    clear-configuration-cache-state-before = CLEANUP
+}
+
+mac_benchmark_tests_warm {
+    tasks = ["testAll"]
+
+    daemon = warm
+    iterations = 10
+    warm-ups = 5
+}
+
+mac_benchmark_tests_cold {
+    tasks = ["testAll"]
+
+    daemon = cold
+    iterations = 10
+    warm-ups = 5
+}
+
+
+gradle-profiler --benchmark --scenario-file mac_benchmark.scenarios --project-dir sportsbook-shared --output-dir mac-benchmark-shared --gradle-user-home ~/.gradle
