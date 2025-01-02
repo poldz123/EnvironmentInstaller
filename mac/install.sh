@@ -15,7 +15,7 @@ install-base() {
 
 install-java() {
 	util-print-header "Installing JAVA-JDK-8"
-	brew install --cask AdoptOpenJDK/openjdk/adoptopenjdk11
+	brew install openjdk@11
 }
 
 install-terminal() {
