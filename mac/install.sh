@@ -80,6 +80,7 @@ install-mobile() {
 install-commands() {
 	util-print-header "Installing BREW-COMMANDS"
  	brew install gradle-profiler
+  	brew install gh
 }
 
 install-applications() {
