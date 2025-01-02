@@ -15,7 +15,6 @@ install-base() {
 
 install-java() {
 	util-print-header "Installing JAVA-JDK-8"
-	brew install --cask AdoptOpenJDK/openjdk/adoptopenjdk8
 	brew install --cask AdoptOpenJDK/openjdk/adoptopenjdk11
 }
 
@@ -80,23 +79,14 @@ install-mobile() {
 
 install-commands() {
 	util-print-header "Installing BREW-COMMANDS"
-	brew install bundletool
-	brew install jenv
+ 	brew install gradle-profiler
 }
 
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
-	brew install --cask spotify
 	brew install --cask google-chrome
 	brew install --cask android-studio
 	brew install --cask sublime-text
-	brew install --cask p4v
-	brew install --cask charles
-	brew install --cask db-browser-for-sqlite
-	brew install --cask android-file-transfer
-	brew install --cask intellij-idea-ce
-	brew install --cask postman
-	brew install --cask visual-studio-code
 }
 
 install-addon() {
@@ -109,7 +99,6 @@ install-addon() {
 install-base
 install-java
 install-terminal
-install-aws-serverless
 install-mobile
 install-commands
 install-applications
