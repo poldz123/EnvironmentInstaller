@@ -74,7 +74,7 @@ install-aws-serverless() {
 }
 
 install-mobile() {
-	brew install android-sdk
+	util-print-header "Installing MOBILE"
 }
 
 install-commands() {
