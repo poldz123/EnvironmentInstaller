@@ -15,8 +15,7 @@ install-base() {
 
 install-java() {
 	util-print-header "Installing JAVA-JDK-8"
-	brew install --cask AdoptOpenJDK/openjdk/adoptopenjdk8
-	brew install --cask AdoptOpenJDK/openjdk/adoptopenjdk11
+	brew install --cask temurin@17
 }
 
 install-terminal() {
@@ -42,6 +41,9 @@ install-terminal() {
 	util-append-unique-text-to-file 'alias gaa="git add ."' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gl="git log --pretty=oneline"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias cls="clear"' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'alias gdl="git diff --shortstat"' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'alias grhh="git reset HEAD --hard"' "$HOME/.zshrc"
+	util-append-unique-text-to-file 'alias gphf="git push -f"' "$HOME/.zshrc"
 	# Create android path environment variables
 	util-append-unique-text-to-file 'export ANDROID_HOME=~/Library/Android/sdk' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'export ANDROID_SDK_ROOT=~/Library/Android/sdk' "$HOME/.zshrc"
@@ -81,22 +83,25 @@ install-mobile() {
 install-commands() {
 	util-print-header "Installing BREW-COMMANDS"
 	brew install bundletool
+ 	brew install gh
 	brew install jenv
 }
 
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
-	brew install --cask spotify
+	# brew install --cask spotify
 	brew install --cask google-chrome
 	brew install --cask android-studio
 	brew install --cask sublime-text
-	brew install --cask p4v
+	# brew install --cask p4v
 	brew install --cask charles
-	brew install --cask db-browser-for-sqlite
-	brew install --cask android-file-transfer
-	brew install --cask intellij-idea-ce
+	# brew install --cask db-browser-for-sqlite
+	# brew install --cask android-file-transfer
+	# brew install --cask intellij-idea-ce
 	brew install --cask postman
-	brew install --cask visual-studio-code
+	# brew install --cask visual-studio-code
+ 	brew install --cask zoom
+  	brew install --cask tuple
 }
 
 install-addon() {
@@ -109,7 +114,7 @@ install-addon() {
 install-base
 install-java
 install-terminal
-install-aws-serverless
+# install-aws-serverless
 install-mobile
 install-commands
 install-applications
