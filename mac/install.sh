@@ -7,10 +7,10 @@ install-base() {
 	curl -L -s -H 'Cache-Control: no-cache' -o installer-rodolfo-util.sh https://raw.githubusercontent.com/poldz123/EnvironmentInstaller/master/util.sh && . ./installer-rodolfo-util.sh
 	rm -f installer-rodolfo-util.sh
 	# Install brew: https://brew.sh/
-	if ! which brew > /dev/null; then
-		util-print-header "Installing BREW"
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	fi
+	# if ! which brew > /dev/null; then
+	# 	util-print-header "Installing BREW"
+	# 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	# fi
 }
 
 install-java() {
