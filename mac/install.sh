@@ -115,7 +115,7 @@ install-base
 install-java
 install-terminal
 # install-aws-serverless
-install-mobile
+# install-mobile
 install-commands
 install-applications
 
