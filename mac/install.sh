@@ -111,7 +111,7 @@ install-addon() {
 	fi
 }
 
-# install-base
+install-base
 # install-java
 install-terminal
 # install-aws-serverless
