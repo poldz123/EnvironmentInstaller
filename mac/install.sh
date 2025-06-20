@@ -20,10 +20,10 @@ install-java() {
 
 install-terminal() {
 	util-print-header "Installing ZSH-TERMINAL"
-	touch ~/.zshrc # Create the file so that zsh wont break during installation
-	brew install --cask iterm2
-	brew install zsh
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
+	# touch ~/.zshrc # Create the file so that zsh wont break during installation
+	# brew install --cask iterm2
+	# brew install zsh
+	# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | true
 	# Create the alias for git
 	util-append-unique-text-to-file 'alias gb="git branch"' "$HOME/.zshrc"
 	util-append-unique-text-to-file 'alias gbc="git checkout"' "$HOME/.zshrc"
@@ -111,13 +111,13 @@ install-addon() {
 	fi
 }
 
-install-base
-install-java
+# install-base
+# install-java
 install-terminal
 # install-aws-serverless
 # install-mobile
-install-commands
-install-applications
+# install-commands
+# install-applications
 
 # Make sure to add $0 arguments since we are running the script in bash
 install-addon "$0"
