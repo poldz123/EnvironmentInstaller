@@ -90,7 +90,7 @@ install-commands() {
 install-applications() {
 	util-print-header "Installing BREW-APPLICATIONS"
 	# brew install --cask spotify
-	brew install --cask google-chrome
+	# brew install --cask google-chrome
 	brew install --cask android-studio
 	brew install --cask sublime-text
 	# brew install --cask p4v
