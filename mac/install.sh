@@ -99,9 +99,11 @@ install-applications() {
 	# brew install --cask android-file-transfer
 	# brew install --cask intellij-idea-ce
 	brew install --cask postman
+	brew install --cask cursor
+	brew install --cask codex
 	# brew install --cask visual-studio-code
- 	brew install --cask zoom
-  	brew install --cask tuple
+ 	# brew install --cask zoom
+  	# brew install --cask tuple
 }
 
 install-addon() {
