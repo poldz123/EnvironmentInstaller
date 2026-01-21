@@ -101,6 +101,7 @@ install-applications() {
 	brew install --cask postman
 	brew install --cask cursor
 	brew install --cask codex
+	brew install --cask warp
 	# brew install --cask visual-studio-code
  	# brew install --cask zoom
   	# brew install --cask tuple
